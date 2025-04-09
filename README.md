@@ -2,6 +2,7 @@
 
 <img src="Graphiques/DOPECal.jpg" alt="Plan D-optimal 1" width="400"/>
 
+![Illustration du plan D-optimal](Graphiques/DOPEcal.jpg)
 ## Table 
 1. [Introduction](#Introduction)
     * [Contexte : choix de plan d'experiences physiques](#DOE)
