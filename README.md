@@ -1,6 +1,6 @@
 # DOPE : Design of Physical Experiments for scalar output expensive computer code.
 
-![DOPE](Graphiques/DOPECal.jpg)
+<img src="Graphiques/DOPECal.jpg" alt="Plan D-optimal 1" width="400"/>
 
 ## Table 
 1. [Introduction](#Introduction)
