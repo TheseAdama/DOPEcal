@@ -1,4 +1,4 @@
-# Criteres bayesiens basés sur la densite a posteriori
+# Criteres bayesiens basÃ©s sur la densite a posteriori
 CoptBayes <- function(X, model, Dx, Dtheta, sigeps,  dprior, rprior, 
                       L=100, K=100, typeCopt='KL', type='SK',...){
   
@@ -58,7 +58,7 @@ KLprior_post <- function(muprior, Sigmaprior, mupost, Sigmapost) {
   return(as.numeric(R))
 }
 
-# Criteres d'optimalités bayesienne (code de calcul lineaire)
+# Criteres d'optimalitÃ©s bayesienne (code de calcul lineaire)
 CoptBayesLin <- function(X, model, Dx, Dtheta,  thetaprior, Sigmaprior, sigeps,
                          L=100, typeCopt='KL', type='SK',...){
   p <- nrow(Dtheta)
@@ -72,8 +72,7 @@ CoptBayesLin <- function(X, model, Dx, Dtheta,  thetaprior, Sigmaprior, sigeps,
               cov.compute = FALSE, se.compute = FALSE, checkNames = FALSE)
   M2 = R$mean
   H = (M1-M2)/(2*alpha)
-  H = matrix(0, ncol=p, nrow=n)
-
+  
   SigmapriorInv = solve(solve(Sigmaprior))
   Minf = t(H)%*%H
   if(typeCopt=="Det"){R = det((1/sigeps)*Minf + SigmapriorInv)}
