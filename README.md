@@ -34,6 +34,11 @@ Les critères suivants sont disponibles dans ce dépôt :
     CoptMFisher(X, model, sigeps, Dx, Dtheta, dftheta, typeCopt = "Det", L = 1000, type = 'SK')
     ```
 
+    - `typeCopt = 'Det'` : determinant de la matrice d'information de Fisher ;
+    - `typeCopt = 'Tr'` : trace de la matrice d'information de Fisher ;
+    - `typeCopt = 'DetInv'`  : determinant de l'inverse de la matrice d'information de Fisher;
+    - `typeCopt = 'TrInv'` : trace de l'inverse de la matrice d'information de Fisher.
+
 - **Critère glouton** : ce critère exploite la variation du code de calcul et la répartition du plan d'expériences dans l'espace expérimental.
 
     ```r
