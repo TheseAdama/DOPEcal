@@ -22,13 +22,13 @@ Les critères suivants sont disponibles dans ce dépôt :
     - `typeCopt = 'MSE'` : erreur quadratique moyenne a posteriori ;
     - `typeCopt = 'KL'`  : divergence de Kullback-Leibler entre la densité a priori et la densité a posteriori.
 
-- **Critères bayésiens linéaires** : une version des critères bayésiens applicable pour les codes de calcul linéaires et les densités a priori gaussiennes.
+- **Critères bayésiens linéaires** : une version des critères bayésiens pour les codes de calcul linéaires et les densités a priori gaussiennes.
 
     ```r
     CoptBayesLin(X, model, Dx, Dtheta, thetaprior, Sigmaprior, sigeps, L = 1000, typeCopt = 'KL', type = 'SK', ...)
     ```
 
-- **Critères alphabétiques** : ce groupe inclut le critère ED-optimalité ainsi que le critère ET-optimalité.
+- **Critères alphabétiques** : inclut le critère ED-optimalité ainsi que le critère ET-optimalité.
 
     ```r
     CoptMFisher(X, model, sigeps, Dx, Dtheta, dftheta, typeCopt = "Det", L = 1000, type = 'SK')
@@ -48,15 +48,15 @@ Pour optimiser l'un de ces critères, un algorithme de recuit simulé est dispon
 
 ```r
 SAOptim(Xinit, f, Dx, maxiter, c = 0.99, Tinit = 0.1, Paccept = "metropolis", schema = "geo")
- ```
+```
  Un algorithme glouton est egalement disponible.
 
-    ```r
-    ForwardOptim(f, Dx, nD, N=NULL, tomax=TRUE, echo=TRUE)
-    ```
+ ```r
+ ForwardOptim(f, Dx, nD, N=NULL, tomax=TRUE, echo=TRUE)
+ ```
 Vous pouvez aussi installer et utiliser l'un des algorithmes d'optimisation proposés dans le package DOEoptimizer, disponible sur ce GitHub.
 
-## Installation <a name="Install"></a>
+## Installation 
 
 Clonez ce dépôt pour télécharger les fichiers en local :
 
@@ -67,9 +67,11 @@ Vous pouvez également télécharger directement le fichier ZIP depuis GitHub.
 
 # Package R : 
 Exécutez le code suivant dans R pour installer les packages nécessaires : 
+
  ```r
 install.packages(c("Dicekriging", " ", " "))
  ```
 
 # Reference
-**Adama Barry, François Bachoc, Sarah Bouquet, Miguel Munoz Zuniga, Clémentine Prieur.Optimal Design ofPhysical and Numerical Experiments for Computer Code Calibration. 2024.〈hal-04615127v2〉)**
+**Adama Barry, François Bachoc, Sarah Bouquet, Miguel Munoz Zuniga, Clémentine Prieur. _Optimal Design of Physical and Numerical Experiments for Computer Code Calibration_. 2024. [hal-04615127v2](https://theses.hal.science/UNIV-UT3/hal-04615127v2)**
+
