@@ -66,7 +66,7 @@ Vous pouvez aussi installer et utiliser l'un des algorithmes d'optimisation prop
 Clonez ce dépôt pour télécharger les fichiers en local :
 
 ```bash
-git clone https://github.com/TheseAdama/DOPE.git
+git clone https://github.com/TheseAdama/DOPEcal.git
 ```
 Vous pouvez également télécharger directement le fichier ZIP depuis GitHub.
 
