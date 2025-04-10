@@ -74,7 +74,7 @@ Vous pouvez également télécharger directement le fichier ZIP depuis GitHub.
 Exécutez le code suivant dans R pour installer les packages nécessaires : 
 
  ```r
-install.packages(c("Dicekriging", " ", " "))
+install.packages(c("Dicekriging", "SimDesign", "lhs", "truncnorm"))
  ```
 
 # Reference
