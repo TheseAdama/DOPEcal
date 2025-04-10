@@ -73,7 +73,7 @@ CoptBayesLin <- function(X, model, Dx, Dtheta,  thetaprior, Sigmaprior, sigeps,
   M2 = R$mean
   H = (M1-M2)/(2*alpha)
   
-  SigmapriorInv = solve(solve(Sigmaprior))
+  SigmapriorInv = solve(Sigmaprior)
   Minf = t(H)%*%H
   if(typeCopt=="Det"){R = det((1/sigeps)*Minf + SigmapriorInv)}
   
