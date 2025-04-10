@@ -15,7 +15,7 @@ Les critères suivants sont disponibles dans ce dépôt :
 - **Critères bayésiens** : ces critères, basés sur la densité a posteriori, sont implémentés par la fonction suivante :
 
     ```r
-    CoptBayes(X, model, Dx, Dtheta, sigeps, dprior, rprior, L = 100, K = 1000, typeCopt = 'KL', type = 'SK', ...)
+    CoptBayes(X, model, Dx, Dtheta, sigeps, dprior, rprior, L = 1000, K = 1000, typeCopt = 'KL', type = 'SK', ...)
     ```
     
     - `typeCopt = 'SOV'` : somme des variances a posteriori ;
@@ -37,7 +37,7 @@ Les critères suivants sont disponibles dans ce dépôt :
 - **Critère glouton** : ce critère exploite la variation du code de calcul et la répartition du plan d'expériences dans l'espace expérimental.
 
     ```r
-    CVMm(X, model, Dx, Dtheta, L = 100, type = "SK", alpha = 0.5)
+    CVMm(X, model, Dx, Dtheta, L = 1000, type = "SK", alpha = 0.5)
     ```
 
 *NB : Ces critères sont calculés à l'aide d'un émulateur de processus gaussien (*model*) à fournir en entrée.*
@@ -47,12 +47,12 @@ Les critères suivants sont disponibles dans ce dépôt :
 Pour optimiser l'un de ces critères, un algorithme de recuit simulé est disponible :
 
 ```r
-SAOptim(Xinit, f, Dx, maxiter, c = 0.99, Tinit = 0.1, Paccept = "metropolis", schema = "geo")
+SAOptim(Xinit, f, Dx, maxiter=1e4, c = 0.99, Tinit = 0.1, Paccept = "metropolis", schema = "geo")
 ```
  Un algorithme glouton est egalement disponible.
 
  ```r
- ForwardOptim(f, Dx, nD, N=NULL, tomax=TRUE, echo=TRUE)
+ ForwardOptim(f, Dx, nD, N=1000, tomax=TRUE, echo=TRUE)
  ```
 Vous pouvez aussi installer et utiliser l'un des algorithmes d'optimisation proposés dans le package DOEoptimizer, disponible sur ce GitHub.
 
