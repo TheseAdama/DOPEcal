@@ -10,20 +10,29 @@ $$X_{opt} \in \text{ argmax } C_{opt}(X) \text{ ou } X_{opt} \in \text{ argmin }
 
 # Description
 Les critères suivants sont disponible dans ce repos : 
-a) Critères bayesiens : deux critères basés sur la densité a posteriori 
+- Critères bayesiens : ces critères sont basés sur la densité a posteriori. La fonction
+  
+ CoptBayes <- function(X, model, Dx, Dtheta, sigeps,  dprior, rprior, L=100, K=1000, typeCopt='KL', type='SK',...)
+ 
+  - typeCopt='SOV' : somme des variances a posteriori.
+  - typeCopt='MSE' : erreur quadratique moyenne a posteriori.
+  - typeCopt='KL'  :  la divergence de Kullback-Leibler entre la densité a priori et la densité a posteriori.
+    
+- Critères bayesiens lineaires : une version des criteres bayesiens correspondant au cas particulier de codes de calcul lineaire et de densité a priori gaussienne.
+  
+  CoptBayesLin <- function(X, model, Dx, Dtheta,  thetaprior, Sigmaprior, sigeps, L=1000, typeCopt='KL', type='SK',...)
+  
+- Critères alphabeitques : le critere ED-optimalité et le critere ET-optimalité.
 
-(somme des variances a posteriori et erreur quadratique moyenne a posteriori et la divergence de Kullback-Leibler entre la densité a priori et la densité 
-a posteriori)
-b)  Critères bayesiens lineaires : une version des criteres bayesiens correspondant au cas particulier de codes de calcul lineaire.
-c) Critères alphabeitques : le critere ED-optimalité et le critere ET-optimalité.
-
-*NB : Ces criteres sont calculés à l'aide d'un émulateur de processus gausien (*model*) à fournir en entrée.*
+*NB : Ces critères sont calculés à l'aide d'un émulateur de processus gausien (*model*) à fournir en entrée.*
 
 # Installation <a name="Install"></a>
-Pour 
+Cloner ce depot pour telecharger les fichiers en local.
 **``git clone https://github.com/TheseAdama/DOPE.git``**
+Ou telecharger directement le fichier ZIP sur github.
 
 # Package R : 
 Executer ce code pour installer les packages R necessaire : 
 
 # Reference
+Adama Barry, François Bachoc, Sarah Bouquet, Miguel Munoz Zuniga, Clémentine Prieur.Optimal Design ofPhysical and Numerical Experiments for Computer Code Calibration. 2024.〈hal-04615127v2〉)
