@@ -22,8 +22,14 @@ Les critères suivants sont disponible dans ce repos :
   
   CoptBayesLin <- function(X, model, Dx, Dtheta,  thetaprior, Sigmaprior, sigeps, L=1000, typeCopt='KL', type='SK',...)
   
-- Critères alphabeitques : le critere ED-optimalité et le critere ET-optimalité.
+- Critères alphabeitques : le critère ED-optimalité et le critere ET-optimalité.
+  
+    CoptMFisher <- function(X, model, sigeps, Dx, Dtheta, dftheta, typeCopt="Det", L=1000, type='SK')
+  
+- Critere glouton : ce critere utilise la variation du code de caluls et la repartition du plan d'experiences dans l'espace experimental.
 
+  CVMm <- function(X, model, Dx, Dtheta, L=100, type="SK", alpha=0.5)
+  
 *NB : Ces critères sont calculés à l'aide d'un émulateur de processus gausien (*model*) à fournir en entrée.*
 
 # Installation <a name="Install"></a>
@@ -35,4 +41,4 @@ Ou telecharger directement le fichier ZIP sur github.
 Executer ce code pour installer les packages R necessaire : 
 
 # Reference
-Adama Barry, François Bachoc, Sarah Bouquet, Miguel Munoz Zuniga, Clémentine Prieur.Optimal Design ofPhysical and Numerical Experiments for Computer Code Calibration. 2024.〈hal-04615127v2〉)
+**Adama Barry, François Bachoc, Sarah Bouquet, Miguel Munoz Zuniga, Clémentine Prieur.Optimal Design ofPhysical and Numerical Experiments for Computer Code Calibration. 2024.〈hal-04615127v2〉)**
