@@ -1,47 +1,29 @@
-# DOPE : Design of Physical Experiments for scalar output expensive computer code.
 
 ![Illustration du plan D-optimal](Graphiques/DOPEcal.jpg)
 
-## Table 
-1. [Introduction](#Introduction)
-    * [Contexte : choix de plan d'experiences physiques](#DOE)
-    * [Cadre statistique de KOH](#CadreKOH)
-    * [Objectifs](#Goal)
-2. [Critères d'optimalités](#Copt)
-    * [Critères bayesiens](#Cbayes)
-    * [Critères alphabetiques](#Calpha)
-    * [Critères bayesiens (cas de code linéaire)](#CbayesLin)
-3. [Examples](#Examples)
-    * [Exemple en 2D](#2D)
-    * [Exemple en 2D](#2D)
-4. [Installation](#Install)
-5. [References](#References)
-
-## Introduction <a name="Introduction"></a>
-
-### Contexte : choix de plan d'experiences physiques <a name="DOE"></a>
-Dans le cadre de la calibration d'un code de calculs couteux, la selection des experiences physiques est important pour avoir un maximum d'information
-sur les parametres incertains.
-
-### Cadre statistique de KOH <a name="CadreKOH"></a>
-Le cadre statistique utilisé est celui de [Kennedy et O'Hagan (2001)](https://www.asc.ohio-state.edu/statistics/comp_exp/jour.club/kennedy01.pdf) avec ...
-
-### Objectifs <a name="Goal"></a>
-Selection le plan d'experiences physiques ($X_{opt}$) par optimisation d'un critere d'optimalité
+# Plan d'experiences pour la calibration de codes de calcul couteux (à sorite scalire)
+Ce repertoire contient des criteres de selection de plan d'experiences physiques pour la calibration d'un code de calculs couteux à sortie scalaire.
+Le cadre statistique utilisé est celui de [Kennedy et O'Hagan (2001)](https://www.asc.ohio-state.edu/statistics/comp_exp/jour.club/kennedy01.pdf).
+L'objectif est selectionner le plan d'experiences physiques par par optimisation d'un critère d'optimalité
 
 $$X_{opt} \in \text{ argmax } C_{opt}(X) \text{ ou } X_{opt} \in \text{ argmin } C_{opt}(X)$$
 
-## Critères d'optimalités <a name="Copt"></a>
-Trois types de criteres sont codés.
-### Critères bayesiens <a name="Cbayes"></a>
-DAP
-### Critères alphabetiques <a name="Calpha"></a>
-Litterature
-### Critères bayesiens (cas de code linéaire) <a name="CbayesLin"></a>
-Cas particulier de code de calculs lineaire ou linearisable.
+# Description
+Les critères suivants sont disponible dans ce repos : 
+a) Critères bayesiens : deux critères basés sur la densité a posteriori 
 
-## Installation <a name="Install"></a>
+(somme des variances a posteriori et erreur quadratique moyenne a posteriori et la divergence de Kullback-Leibler entre la densité a priori et la densité 
+a posteriori)
+b)  Critères bayesiens lineaires : une version des criteres bayesiens correspondant au cas particulier de codes de calcul lineaire.
+c) Critères alphabeitques : le critere ED-optimalité et le critere ET-optimalité.
+
+*NB : Ces criteres sont calculés à l'aide d'un émulateur de processus gausien (*model*) à fournir en entrée.*
+
+# Installation <a name="Install"></a>
 Pour 
 **``git clone https://github.com/TheseAdama/DOPE.git``**
 
-## References
+# Package R : 
+Executer ce code pour installer les packages R necessaire : 
+
+# Reference
