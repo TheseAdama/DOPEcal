@@ -70,13 +70,13 @@ git clone https://github.com/TheseAdama/DOPEcal.git
 ```
 Vous pouvez également télécharger directement le fichier ZIP depuis GitHub.
 
-# Package R : 
+## Package R : 
 Exécutez le code suivant dans R pour installer les packages nécessaires : 
 
  ```r
 install.packages(c("Dicekriging", "SimDesign", "lhs", "truncnorm"))
  ```
 
-# Reference
+## Reference
 **Adama Barry, François Bachoc, Sarah Bouquet, Miguel Munoz Zuniga, Clémentine Prieur. _Optimal Design of Physical and Numerical Experiments for Computer Code Calibration_. 2024. [hal-04615127v2](https://theses.hal.science/UNIV-UT3/hal-04615127v2)**
 
