@@ -45,7 +45,8 @@ Les critères suivants sont disponibles dans ce dépôt :
     CVMm(X, model, Dx, Dtheta, L = 1000, type = "SK", alpha = 0.5)
     ```
 
-*NB : Ces critères sont calculés à l'aide d'un émulateur de processus gaussien (*model*) à fournir en entrée.*
+*NB : Ces critères sont calculés à l'aide d'un émulateur de processus gaussien (model km du package [DiceKriging](https://github.com/cran/DiceKriging)) à fournir en entrée.*
+
 
 ### Optimisation
 
