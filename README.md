@@ -5,7 +5,7 @@
 Ce dépôt contient des critères de sélection de plans d'expériences physiques pour la calibration d'un code de calculs coûteux à sortie scalaire. Le cadre statistique utilisé est celui de [Kennedy et O'Hagan (2001)](https://www.asc.ohio-state.edu/statistics/comp_exp/jour.club/kennedy01.pdf). L'objectif est de sélectionner le plan d'expériences physiques par optimisation d'un critère d'optimalité :
 
 $$
-X_{\text{opt}} \in \text{argmax} \textbf{C}_{\text{opt}}(X) \quad \text{ ou } \quad X_{\text{opt}} \in \text{argmin} \textbf{C}_{\text{opt}}(X)
+X_{\text{opt}} \in \text{argmax} C_{\text{opt}}(X) \quad \text{ ou } \quad X_{\text{opt}} \in \text{argmin} C_{\text{opt}}(X)
 $$
 
 ## Description
