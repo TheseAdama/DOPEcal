@@ -54,7 +54,7 @@ KLprior_post <- function(muprior, Sigmaprior, mupost, Sigmapost) {
   B <- sum(diag(solve(Sigmapost) %*% Sigmaprior))
   diff <- matrix(mupost - muprior, ncol = 1)
   C <- t(diff) %*% solve(Sigmapost) %*% diff
-  R <- 0.5 * (A - k + B + C)
+  R <- 0.5 * (A - p + B + C)
   return(as.numeric(R))
 }
 
